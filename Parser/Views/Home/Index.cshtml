@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Parser.Domain.Vacancy>
+@{ ViewBag.Title = "Все пользователи"; }
+<a asp-action="Create">Добавить пользователя</a>
+<table class="table">
+    <tr><td>Position</td><td>Salary</td><td>Company</td><td>Details</td></tr>
+    @foreach (var item in Model)
+    {
+<tr><td>@item.Position</td><td>@item.Salary</td><td>@item.Company</td><td>@item.Details</td></tr>
+}
+</table>
